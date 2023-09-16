@@ -1,4 +1,4 @@
-module github.com/youngzhu/go-smail
+module github.com/youngzhy/go-smail
 
 go 1.17
 
