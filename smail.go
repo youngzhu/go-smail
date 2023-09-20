@@ -36,8 +36,14 @@ func SendMail(subject, body string) error {
 	m.SetHeader("From", from)
 	m.SetHeader("To", to)
 
+	if subject == "" {
+		return fmt.Errorf("邮件主题不能为空\n")
+	}
 	m.SetHeader("Subject", subject)
 
+	if body == "" {
+		body = "RT"
+	}
 	m.SetBody("text/plain", body)
 
 	smtp := getSmtpConfig(from)
