@@ -3,7 +3,10 @@ package smail
 import "testing"
 
 func TestSendMail(t *testing.T) {
-	SendMail("Test", "Say hi")
+	err := SendMail("Test", "Say hi")
+	if err != nil {
+		t.Error(err)
+	}
 }
 
 func TestGetSmtpConfig(t *testing.T) {

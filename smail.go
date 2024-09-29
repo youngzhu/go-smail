@@ -76,10 +76,11 @@ var smtpConfigs = map[string]smtpConfig{
 		host: "smtp.163.com",
 		port: 465,
 	},
-	"hotmail.com": {
-		host: "smtp.office365.com",
-		port: 587,
-	},
+	// 需要token了，而且很麻烦
+	//"hotmail.com": {
+	//	host: "smtp.office365.com",
+	//	port: 587,
+	//},
 }
 
 func getSmtpConfig(mail string) smtpConfig {
